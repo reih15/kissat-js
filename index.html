@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2MCYY2NQJP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-2MCYY2NQJP");
+    </script>
+    <meta name="google-site-verification" content="PS05GIOTHdcFzAqPZMtYTgcvYlAKk6_jaJJuZ7B7AZk" />
+
+    <meta charset="utf-8" />
+    <title>Kissat JS</title>
+    <meta name="description" content="SAT solver Kissat compiled with Emscripten" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <h2>
+      SAT Solver <a href="https://github.com/arminbiere/kissat">Kissat</a> in JavaScript (Compiled with
+      <a href="https://github.com/emscripten-core/emscripten">Emscripten</a>)
+    </h2>
+
+    <div>
+      Input CNF
+      <br />
+      <textarea id="cnf"></textarea>
+    </div>
+
+    <div>
+      <label for="configuration">Solver Configuration</label>
+      <select id="configuration">
+        <option selected>default</option>
+        <option>basic</option>
+        <option>plain</option>
+        <option>sat</option>
+        <option>unsat</option>
+      </select>
+    </div>
+
+    <div>
+      <button id="solve">Solve</button>
+    </div>
+
+    <div>
+      Output
+      <br />
+      <textarea readonly spellcheck="false" id="output"></textarea>
+    </div>
+
+    <script src="main.js"></script>
+
+    <script src="kissat-emscripten.js"></script>
+    <script src="kissat.js"></script>
+    <script>
+      Module.onRuntimeInitialized = () => {
+        console.log("[main] Loaded 'Kissat'");
+      };
+    </script>
+  </body>
+</html>
