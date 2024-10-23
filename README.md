@@ -2,6 +2,6 @@
 
 SAT solver [Kissat](https://github.com/arminbiere/kissat) in JavaScript (compiled with [Emscripten](https://github.com/emscripten-core/emscripten))
 
-## URL
+## CaDiCaL JS
 
-<https://reih15.github.io/kissat-js>
+<https://github.com/reih15/cadical-js>
